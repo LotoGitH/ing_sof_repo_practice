@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Landing Page</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 </head>
 <body>
   <section class="hero is-primary is-bold">
@@ -22,6 +23,8 @@
       <h2 class="title has-text-centered">About Us</h2>
       <img src="https://via.placeholder.com/800x400" alt="About Us Image" class="image is-3by1 is-centered">
     </div>
+  </section>
+
   <section class="section" id="services">
     <div class="container">
       <h2 class="title has-text-centered">Our Services</h2>
@@ -47,12 +50,49 @@
       </div>
     </div>
   </section>
-  <section>
-        <p class="subtitle">Hola  chavales</p>
+  <section class="section">
+    <div class="container">
+      <h2 class="title has-text-centered">Galería</h2>
+      <div class="swiper swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1200x600?text=Imagen+1" alt="Placeholder 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1200x600?text=Imagen+2" alt="Placeholder 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1200x600?text=Imagen+3" alt="Placeholder 3">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
   </section>
   <footer class="footer">
     <div class="content has-text-centered">
       <p>&copy; 2024 Your Company. All rights reserved.</p>
     </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
 </body>
 </html>
